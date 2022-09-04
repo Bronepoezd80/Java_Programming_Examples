@@ -1,13 +1,15 @@
+package _02_Prime_Number_Program_in_Java;
+
 /**
  * 
  * @author Jakob Janzen <jakob.janzen80@gmail.com>
  *
- * Prime Number Program in Java (Another way).
+ * Find prime numbers between two numbers.
  */
 
 import java.util.Scanner;
 
-public class PrimeExample3 {
+public class PrimeExample4 {
 
 	/**
 	 * 
@@ -15,12 +17,15 @@ public class PrimeExample3 {
 	 */
 	public static void main(String[] args) {
 		Scanner s = new Scanner(System.in); // must be closed at the end
-		System.out.print("Enter a number : ");
-		int n = s.nextInt();
-		if (isPrime(n)) {
-			System.out.println(n + " is a prime number");
-		} else {
-			System.out.println(n + " is not a prime number");
+		System.out.print("Enter the first number : ");
+		int start = s.nextInt();
+		System.out.print("Enter the second number : ");
+		int end = s.nextInt();
+		System.out.println("List of prime numbers between " + start + " and " + end);
+		for (int i = start; i <= end; i++) {
+			if (isPrime(i)) {
+				System.out.println(i);
+			}
 		}
 		s.close(); // closed
 	}
