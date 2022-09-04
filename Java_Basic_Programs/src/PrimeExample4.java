@@ -26,7 +26,7 @@ public class PrimeExample4 {
 				System.out.println(i);
 			}
 		}
-		s.close();
+		s.close(); // closed
 	}
 
 	/**

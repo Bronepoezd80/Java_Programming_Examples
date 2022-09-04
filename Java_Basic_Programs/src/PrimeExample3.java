@@ -14,7 +14,7 @@ public class PrimeExample3 {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		Scanner s = new Scanner(System.in);
+		Scanner s = new Scanner(System.in); // must be closed at the end
 		System.out.print("Enter a number : ");
 		int n = s.nextInt();
 		if (isPrime(n)) {
@@ -22,6 +22,7 @@ public class PrimeExample3 {
 		} else {
 			System.out.println(n + " is not a prime number");
 		}
+		s.close(); // closed
 	}
 
 	/**
