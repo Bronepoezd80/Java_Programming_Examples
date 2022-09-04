@@ -9,6 +9,10 @@ import java.util.Scanner;
 
 public class PrimeExample3 {
 
+	/**
+	 * 
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		Scanner s = new Scanner(System.in);
 		System.out.print("Enter a number : ");
@@ -20,6 +24,11 @@ public class PrimeExample3 {
 		}
 	}
 
+	/**
+	 * 
+	 * @param n
+	 * @return
+	 */
 	public static boolean isPrime(int n) {
 		if (n <= 1) {
 			return false;

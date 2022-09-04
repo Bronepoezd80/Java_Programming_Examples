@@ -7,6 +7,10 @@
 
 public class PrimeExample2 {
 
+	/**
+	 * 
+	 * @param n
+	 */
 	static void checkPrime(int n) {
 		int i, m = 0, flag = 0;
 		m = n / 2;
@@ -26,6 +30,10 @@ public class PrimeExample2 {
 		} // end of else
 	}
 
+	/**
+	 * 
+	 * @param args
+	 */
 	public static void main(String args[]) {
 		checkPrime(1);
 		checkPrime(3);
