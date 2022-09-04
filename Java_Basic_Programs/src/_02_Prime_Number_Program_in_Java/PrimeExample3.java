@@ -1,9 +1,10 @@
 package _02_Prime_Number_Program_in_Java;
+
 /**
  * 
  * @author Jakob Janzen <jakob.janzen80@gmail.com>
  *
- * Prime Number Program in Java (Another way).
+ *         Prime Number Program in Java (Another way).
  */
 
 import java.util.Scanner;

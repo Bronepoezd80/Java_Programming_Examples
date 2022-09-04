@@ -1,9 +1,10 @@
 package _03_Palindrome_Program_in_Java;
+
 /**
  * 
  * @author Jakob Janzen <jakob.janzen80@gmail.com>
  *
- * Palindrome Program in Java (Another way).
+ *         Palindrome Program in Java (Another way).
  */
 import java.util.*;
 

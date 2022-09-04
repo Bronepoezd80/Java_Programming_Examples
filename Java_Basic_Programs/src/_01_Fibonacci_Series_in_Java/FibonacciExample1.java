@@ -1,4 +1,5 @@
 package _01_Fibonacci_Series_in_Java;
+
 /**
  * 
  * @author Jakob Janzen <jakob.janzen80@gmail.com>
