@@ -1,6 +1,5 @@
 package _01_Fibonacci_Series_in_Java;
 
-import _03_Palindrome_Program_in_Java.Description;
 
 /**
  * 
@@ -16,7 +15,7 @@ public class FibonacciExample1 {
    * @param args
    */
   public static void main(String[] args) {
-    Description.print();
+    General.Description.print(1);
     int n1 = 0, n2 = 1, n3, i, count = 20;
     System.out.print(n1 + " " + n2); // printing 0 and 1
 

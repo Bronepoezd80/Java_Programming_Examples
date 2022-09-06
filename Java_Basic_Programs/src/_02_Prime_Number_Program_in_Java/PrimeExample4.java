@@ -9,8 +9,6 @@ package _02_Prime_Number_Program_in_Java;
 
 import java.util.Scanner;
 
-import _03_Palindrome_Program_in_Java.Description;
-
 public class PrimeExample4 {
 
   /**
@@ -18,7 +16,7 @@ public class PrimeExample4 {
    * @param args
    */
   public static void main(String[] args) {
-    Description.print();
+    General.Description.print(2);
     Scanner s = new Scanner(System.in); // must be closed at the end
     System.out.print("Enter the first number : ");
     int start = s.nextInt();

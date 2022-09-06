@@ -1,7 +1,5 @@
 package _02_Prime_Number_Program_in_Java;
 
-import _03_Palindrome_Program_in_Java.Description;
-
 /**
  * 
  * @author Jakob Janzen <jakob.janzen80@gmail.com>
@@ -16,7 +14,7 @@ public class PrimeExample2 {
    * @param n
    */
   static void checkPrime(int n) {
-    Description.print();
+    General.Description.print(2);
     int i, m = 0, flag = 0;
     m = n / 2;
     if (n == 0 || n == 1) {

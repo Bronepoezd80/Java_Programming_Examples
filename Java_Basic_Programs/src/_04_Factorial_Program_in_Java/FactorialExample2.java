@@ -27,7 +27,7 @@ public class FactorialExample2 {
    * @param args
    */
   public static void main(String[] args) {
-    Description.print();
+    General.Description.print(4);
     int fact = 1;
     int number = 4;// It is the number to calculate factorial
     fact = factorial(number);
