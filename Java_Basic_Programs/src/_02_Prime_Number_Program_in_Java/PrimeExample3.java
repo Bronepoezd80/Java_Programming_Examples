@@ -16,7 +16,7 @@ public class PrimeExample3 {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-    General.Description.print(2);
+    General.Description.print(2, "Prime Number Program in Java (Another way)");
 		Scanner s = new Scanner(System.in); // must be closed at the end
 		System.out.print("Enter a number : ");
 		int n = s.nextInt();

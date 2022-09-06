@@ -15,7 +15,7 @@ public class PalindromeExample2 {
    * @param args
    */
   public static void main(String[] args) {
-    General.Description.print(3);
+    General.Description.print(3, "Palindrome Program in Java (Another way)");
     String original, reverse = ""; // Objects of String class
     Scanner in = new Scanner(System.in);
     System.out.println("Enter a string/number to check if it is a palindrome");

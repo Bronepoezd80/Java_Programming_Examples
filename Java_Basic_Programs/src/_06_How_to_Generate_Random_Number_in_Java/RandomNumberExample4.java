@@ -15,7 +15,7 @@ public class RandomNumberExample4 {
    * @param args
    */
   public static void main(String[] args) {
-    General.Description.print(6);
+    General.Description.print(6, "Using the ThreadLocalRandom Class");
     // Generate random integers between 0 to 999
     int a = ThreadLocalRandom.current().nextInt();
     int b = ThreadLocalRandom.current().nextInt();

@@ -15,7 +15,7 @@ public class RandomNumberExample5 {
    * @param args
    */
   public static void main(String[] args) {
-    General.Description.print(6);
+    General.Description.print(6, "Random Number Generation in Java 8");
     randomInts(5);
     randomInts(9, 50, 90);
     // getStreamOfRandomInts(30, 50);

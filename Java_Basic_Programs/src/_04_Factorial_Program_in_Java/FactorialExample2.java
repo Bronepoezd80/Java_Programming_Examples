@@ -27,7 +27,7 @@ public class FactorialExample2 {
    * @param args
    */
   public static void main(String[] args) {
-    General.Description.print(4);
+    General.Description.print(4, "Factorial Program using recursion in Java");
     int fact = 1;
     int number = 4;// It is the number to calculate factorial
     fact = factorial(number);

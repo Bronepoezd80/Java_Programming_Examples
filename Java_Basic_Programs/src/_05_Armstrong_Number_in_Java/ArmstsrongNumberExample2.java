@@ -54,7 +54,7 @@ public class ArmstsrongNumberExample2 {
    * @param args
    */
   public static void main(String[] args) {
-    General.Description.print(5);
+    General.Description.print(5, "Armstrong Number Java Program");
     int num;
     Scanner sc = new Scanner(System.in);
     System.out.print("Enter the number: ");

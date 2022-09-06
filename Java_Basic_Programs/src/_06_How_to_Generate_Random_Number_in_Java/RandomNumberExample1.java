@@ -15,7 +15,7 @@ public class RandomNumberExample1 {
    * @param args
    */
   public static void main(String[] args) {
-    General.Description.print(6);
+    General.Description.print(6, "Using the Math.random() Method");
     System.out.println("1st Random Number: " + Math.random());
     System.out.println("2nd Random Number: " + Math.random());
     System.out.println("3rd Random Number: " + Math.random());

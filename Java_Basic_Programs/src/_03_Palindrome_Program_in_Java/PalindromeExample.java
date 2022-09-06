@@ -13,7 +13,7 @@ public class PalindromeExample {
    * @param args
    */
   public static void main(String[] args) {
-    General.Description.print(3);
+    General.Description.print(3, "Palindrome Program in Java");
     int r, sum = 0, temp;
     int n = 454; // It is the number variable to be checked for palindrome
 

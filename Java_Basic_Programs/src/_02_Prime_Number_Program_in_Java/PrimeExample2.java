@@ -14,7 +14,7 @@ public class PrimeExample2 {
    * @param n
    */
   static void checkPrime(int n) {
-    General.Description.print(2);
+    General.Description.print(2, "Prime Number Program using Method in Java");
     int i, m = 0, flag = 0;
     m = n / 2;
     if (n == 0 || n == 1) {

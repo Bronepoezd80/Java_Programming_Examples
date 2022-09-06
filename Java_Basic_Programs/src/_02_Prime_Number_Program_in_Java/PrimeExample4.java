@@ -16,7 +16,7 @@ public class PrimeExample4 {
    * @param args
    */
   public static void main(String[] args) {
-    General.Description.print(2);
+    General.Description.print(2, "Find prime numbers between two numbers");
     Scanner s = new Scanner(System.in); // must be closed at the end
     System.out.print("Enter the first number : ");
     int start = s.nextInt();

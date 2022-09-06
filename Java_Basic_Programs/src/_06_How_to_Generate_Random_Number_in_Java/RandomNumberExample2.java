@@ -15,7 +15,7 @@ public class RandomNumberExample2 {
    * @param args
    */
   public static void main(String[] args) {
-    General.Description.print(6);
+    General.Description.print(6, "Using the Math.random() Method");
     int min = 200;
     int max = 400;
     // Generate random double value from 200 to 400

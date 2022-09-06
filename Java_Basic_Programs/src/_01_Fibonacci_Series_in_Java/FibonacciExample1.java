@@ -15,7 +15,7 @@ public class FibonacciExample1 {
    * @param args
    */
   public static void main(String[] args) {
-    General.Description.print(1);
+    General.Description.print(1, "Fibonacci Series in Java without using recursion");
     int n1 = 0, n2 = 1, n3, i, count = 20;
     System.out.print(n1 + " " + n2); // printing 0 and 1
 

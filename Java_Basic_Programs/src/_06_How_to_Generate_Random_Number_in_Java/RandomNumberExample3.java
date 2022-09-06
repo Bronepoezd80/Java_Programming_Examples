@@ -15,7 +15,7 @@ public class RandomNumberExample3 {
    * @param args
    */
   public static void main(String[] args) {
-    General.Description.print(6);
+    General.Description.print(6, "Using the Random Class");
     // creating an object of Random class
     Random random = new Random();
     // Generates random integers 0 to 49
