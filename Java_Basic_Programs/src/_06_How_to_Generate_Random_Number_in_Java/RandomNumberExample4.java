@@ -1,13 +1,13 @@
 package _06_How_to_Generate_Random_Number_in_Java;
 
+import java.util.concurrent.ThreadLocalRandom;
+
 /**
  * 
  * @author Jakob Janzen <jakob.janzen80@gmail.com>
  *
  *         Using the ThreadLocalRandom Class.
  */
-import java.util.concurrent.ThreadLocalRandom;
-
 public class RandomNumberExample4 {
 
   /**

@@ -1,13 +1,11 @@
 package _01_Fibonacci_Series_in_Java;
 
-
 /**
  * 
  * @author Jakob Janzen <jakob.janzen80@gmail.com>
  *
  *         Fibonacci Series in Java without using recursion.
  */
-
 public class FibonacciExample1 {
 
   /**

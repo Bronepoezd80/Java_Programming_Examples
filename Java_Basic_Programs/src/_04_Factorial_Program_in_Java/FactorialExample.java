@@ -6,7 +6,6 @@ package _04_Factorial_Program_in_Java;
  *
  *         Factorial Program using loop in Java.
  */
-
 public class FactorialExample {
 
   /**

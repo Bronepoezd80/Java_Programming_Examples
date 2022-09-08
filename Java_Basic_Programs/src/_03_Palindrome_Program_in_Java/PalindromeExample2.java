@@ -1,13 +1,13 @@
 package _03_Palindrome_Program_in_Java;
 
+import java.util.*;
+
 /**
  * 
  * @author Jakob Janzen <jakob.janzen80@gmail.com>
  *
  *         Palindrome Program in Java (Another way).
  */
-import java.util.*;
-
 public class PalindromeExample2 {
 
   /**

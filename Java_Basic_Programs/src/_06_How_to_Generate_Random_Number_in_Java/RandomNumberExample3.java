@@ -1,13 +1,13 @@
 package _06_How_to_Generate_Random_Number_in_Java;
 
+import java.util.Random;
+
 /**
  * 
  * @author Jakob Janzen <jakob.janzen80@gmail.com>
  *
  *         Using the Random Class.
  */
-import java.util.Random;
-
 public class RandomNumberExample3 {
 
   /**

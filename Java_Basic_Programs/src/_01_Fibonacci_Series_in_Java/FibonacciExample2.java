@@ -6,7 +6,6 @@ package _01_Fibonacci_Series_in_Java;
  *
  *         Fibonacci Series using recursion in Java.
  */
-
 public class FibonacciExample2 {
 
   static int n1 = 0, n2 = 1, n3 = 0;

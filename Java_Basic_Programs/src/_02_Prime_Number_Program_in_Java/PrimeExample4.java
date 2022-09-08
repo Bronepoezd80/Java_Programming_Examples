@@ -1,14 +1,13 @@
 package _02_Prime_Number_Program_in_Java;
 
+import java.util.Scanner;
+
 /**
  * 
  * @author Jakob Janzen <jakob.janzen80@gmail.com>
  *
  *         Find prime numbers between two numbers.
  */
-
-import java.util.Scanner;
-
 public class PrimeExample4 {
 
   /**

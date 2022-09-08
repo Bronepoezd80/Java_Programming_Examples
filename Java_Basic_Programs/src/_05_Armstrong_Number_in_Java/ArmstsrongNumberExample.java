@@ -1,21 +1,14 @@
 package _05_Armstrong_Number_in_Java;
 
-/**
- * 
- * @author Jakob Janzen <jakob.janzen80@gmail.com>
- *
- *         Armstrong Number Java Program.
- */
-
-/**
- * 
- * @author Jakob Janzen <jakob.janzen80@gmail.com>
- *
- *         Armstrong Number Java Program.
- */
 import java.util.Scanner;
 import java.lang.Math;
 
+/**
+ * 
+ * @author Jakob Janzen <jakob.janzen80@gmail.com>
+ *
+ *         Armstrong Number Java Program.
+ */
 public class ArmstsrongNumberExample {
 
   // function to check if the number is Armstrong or not

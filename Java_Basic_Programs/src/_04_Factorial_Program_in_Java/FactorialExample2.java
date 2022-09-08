@@ -6,7 +6,6 @@ package _04_Factorial_Program_in_Java;
  *
  *         Factorial Program using recursion in Java.
  */
-
 public class FactorialExample2 {
 
   /**

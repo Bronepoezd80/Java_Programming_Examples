@@ -6,7 +6,6 @@ package _02_Prime_Number_Program_in_Java;
  *
  *         Prime Number Program in Java.
  */
-
 public class PrimeExample {
 
   /**
