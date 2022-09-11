@@ -8,7 +8,7 @@ package _01_Fibonacci_Series_in_Java;
  */
 public class FibonacciExample1 {
 
-  public static int count = 20;
+  private static int count = 20;
 
   /**
    * 
