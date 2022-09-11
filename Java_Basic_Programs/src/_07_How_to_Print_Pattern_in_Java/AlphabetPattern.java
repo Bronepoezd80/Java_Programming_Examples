@@ -4,7 +4,7 @@ package _07_How_to_Print_Pattern_in_Java;
  * 
  * @author Jakob Janzen <jakob.janzen80@gmail.com>
  *
- *         Alphabet Star Pattern.
+ *         Star Pattern: Alphabet Star Pattern.
  */
 public class AlphabetPattern {
 
@@ -13,7 +13,7 @@ public class AlphabetPattern {
    * @param args
    */
   public static void main(String[] args) {
-    General.Description.print(7, "Alphabet Star Pattern");
+    General.Description.print(7, "Star Pattern: Alphabet Star Pattern");
     int i, j, n = 8;
     // Outer for loop for number of lines
     for (i = 0; i <= n; i++) {

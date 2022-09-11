@@ -4,7 +4,7 @@ package _07_How_to_Print_Pattern_in_Java;
  * 
  * @author Jakob Janzen <jakob.janzen80@gmail.com>
  *
- *         Reverse Pyramid Star Pattern.
+ *         Star Pattern: Reverse Pyramid Star Pattern.
  */
 public class ReversePyramidPattern {
 
@@ -13,7 +13,7 @@ public class ReversePyramidPattern {
    * @param args
    */
   public static void main(String[] args) {
-    General.Description.print(7, "Reverse Pyramid Star Pattern");
+    General.Description.print(7, "Star Pattern: Reverse Pyramid Star Pattern");
     int rows = 8;
     for (int i = 0; i <= rows - 1; i++) {
       for (int j = 0; j <= i; j++) {

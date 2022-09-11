@@ -6,7 +6,7 @@ import java.util.Scanner;
  * 
  * @author Jakob Janzen <jakob.janzen80@gmail.com>
  *
- *         Diamond Shape Pattern.
+ *         Star Pattern: Diamond Shape Pattern.
  */
 public class DiamondPattern {
 
@@ -15,7 +15,7 @@ public class DiamondPattern {
    * @param args
    */
   public static void main(String[] args) {
-    General.Description.print(7, "Diamond Shape Pattern");
+    General.Description.print(7, "Star Pattern: Diamond Shape Pattern");
     int row, i, j, space = 1;
     System.out.print("Enter the number of rows you want to print: ");
     Scanner sc = new Scanner(System.in);

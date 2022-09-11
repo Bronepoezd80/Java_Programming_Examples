@@ -6,7 +6,7 @@ import java.util.Scanner;
  * 
  * @author Jakob Janzen <jakob.janzen80@gmail.com>
  *
- *         Left Pascal's Triangle.
+ *         Star Pattern: Left Pascal's Triangle.
  */
 public class LeftPascalTrianglePattern {
 
@@ -15,7 +15,7 @@ public class LeftPascalTrianglePattern {
    * @param args
    */
   public static void main(String[] args) {
-    General.Description.print(7, "Left Pascal's Triangle");
+    General.Description.print(7, "Star Pattern: Left Pascal's Triangle");
     int i, j, k, rows;
     Scanner sc = new Scanner(System.in);
     System.out.print("Enter the number of rows you want to print: ");

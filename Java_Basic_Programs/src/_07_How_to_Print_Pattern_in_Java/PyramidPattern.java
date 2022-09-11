@@ -4,7 +4,7 @@ package _07_How_to_Print_Pattern_in_Java;
  * 
  * @author Jakob Janzen <jakob.janzen80@gmail.com>
  *
- *         Pyramid Star Pattern.
+ *         Star Pattern: Pyramid Star Pattern.
  */
 public class PyramidPattern {
 
@@ -13,7 +13,7 @@ public class PyramidPattern {
    * @param args
    */
   public static void main(String[] args) {
-    General.Description.print(7, "Pyramid Star Pattern");
+    General.Description.print(7, "Star Pattern: Pyramid Star Pattern");
     // i for rows and j for columns
     // row denotes the number of rows you want to print
     int i, j, row = 6;

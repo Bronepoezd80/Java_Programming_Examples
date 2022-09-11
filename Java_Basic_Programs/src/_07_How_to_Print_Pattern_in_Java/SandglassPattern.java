@@ -6,7 +6,7 @@ import java.util.Scanner;
  * 
  * @author Jakob Janzen <jakob.janzen80@gmail.com>
  *
- *         Sandglass Star Pattern.
+ *         Star Pattern: Sandglass Star Pattern.
  */
 public class SandglassPattern {
 
@@ -15,7 +15,7 @@ public class SandglassPattern {
    * @param args
    */
   public static void main(String[] args) {
-    General.Description.print(7, "Sandglass Star Pattern");
+    General.Description.print(7, "Star Pattern: Sandglass Star Pattern");
     int i, j, k, n;
     Scanner sc = new Scanner(System.in);
     System.out.print("Enter the number of rows you want to print: ");
