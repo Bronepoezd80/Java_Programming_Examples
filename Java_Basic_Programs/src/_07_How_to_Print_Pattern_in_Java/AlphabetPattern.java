@@ -14,14 +14,14 @@ public class AlphabetPattern {
    */
   public static void main(String[] args) {
     General.Description.print(7, "Star Pattern: Alphabet Star Pattern");
-    int i, j, n = 8;
+    
     // Outer for loop for number of lines
-    for (i = 0; i <= n; i++) {
+    for (int i = 0, n = 8; i <= n; ++i) {
       // Inner for loop for logic execution
-      for (j = 0; j <= n / 2; j++) {
+      for (int j = 0; j <= n / 2; ++j) {
         // prints two vertical lines
         if ((j == 0 || j == n / 2) && i != 0 ||
-        // print first line of alphabet
+            // print first line of alphabet
             i == 0 && j != n / 2 ||
             // prints middle line
             i == n / 2) {
