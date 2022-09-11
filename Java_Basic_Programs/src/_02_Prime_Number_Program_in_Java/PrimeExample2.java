@@ -12,7 +12,7 @@ public class PrimeExample2 {
    * 
    * @param n
    */
-  static void checkPrime(int n) {
+  private static void checkPrime(int n) {
     if (n <= 1) {
       System.out.println(n + " is not prime number");
     } else {

@@ -8,6 +8,8 @@ package _04_Factorial_Program_in_Java;
  */
 public class FactorialExample2 {
 
+  private static int number = 4; // It is the number to calculate factorial
+
   /**
    * 
    * @param n
@@ -28,7 +30,6 @@ public class FactorialExample2 {
   public static void main(String[] args) {
     General.Description.print(4, "Factorial Program using recursion in Java");
     int fact = 1;
-    int number = 4;// It is the number to calculate factorial
     fact = factorial(number);
     System.out.println("Factorial of " + number + " is: " + fact);
   }

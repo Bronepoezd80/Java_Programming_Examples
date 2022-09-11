@@ -34,7 +34,7 @@ public class PrimeExample3 {
    * @param n
    * @return
    */
-  public static boolean isPrime(int n) {
+  private static boolean isPrime(int n) {
     if (n <= 1) {
       return false;
     }

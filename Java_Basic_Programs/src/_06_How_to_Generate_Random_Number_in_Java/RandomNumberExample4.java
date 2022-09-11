@@ -16,27 +16,22 @@ public class RandomNumberExample4 {
    */
   public static void main(String[] args) {
     General.Description.print(6, "Using the ThreadLocalRandom Class");
-    // Generate random integers between 0 to 999
-    int a = ThreadLocalRandom.current().nextInt();
-    int b = ThreadLocalRandom.current().nextInt();
+
     // Print random integer values
     System.out.println("Randomly Generated Integer Values:");
-    System.out.println(a);
-    System.out.println(b);
-    // Generate Random double values
-    double c = ThreadLocalRandom.current().nextDouble();
-    double d = ThreadLocalRandom.current().nextDouble();
+    // Generate random integers between 0 to 999
+    System.out.println(ThreadLocalRandom.current().nextInt());
+    System.out.println(ThreadLocalRandom.current().nextInt());
+
     // Print random doubles
     System.out.println("Randomly Generated Double Values:");
-    System.out.println(c);
-    System.out.println(d);
-    // Generate random boolean values
-    boolean e = ThreadLocalRandom.current().nextBoolean();
-    boolean f = ThreadLocalRandom.current().nextBoolean();
+    System.out.println(ThreadLocalRandom.current().nextDouble());
+    System.out.println(ThreadLocalRandom.current().nextDouble());
+
     // Print random Booleans
     System.out.println("Randomly Generated Boolean Values:");
-    System.out.println(e);
-    System.out.println(f);
+    System.out.println(ThreadLocalRandom.current().nextBoolean());
+    System.out.println(ThreadLocalRandom.current().nextBoolean());
   }
 
 }

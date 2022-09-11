@@ -14,7 +14,7 @@ public class FibonacciExample2 {
    * 
    * @param count
    */
-  static void printFibonacci(int count) {
+  private static void printFibonacci(int count) {
     if (count >= 0) {
       System.out.print(" " + n2);
       n2 += n1;

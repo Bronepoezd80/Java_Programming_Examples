@@ -10,16 +10,18 @@ import java.lang.Math;
  */
 public class RandomNumberExample1 {
 
+  private static int maxrand = 100;
+
   /**
    * 
    * @param args
    */
   public static void main(String[] args) {
     General.Description.print(6, "Using the Math.random() Method");
-    System.out.println("1st Random Number: " + Math.random());
-    System.out.println("2nd Random Number: " + Math.random());
-    System.out.println("3rd Random Number: " + Math.random());
-    System.out.println("4th Random Number: " + Math.random());
+
+    for (int i = 1; i <= maxrand; ++i) {
+      System.out.println(i + ".\tRandom Number:\t" + Math.random());
+    }
   }
 
 }

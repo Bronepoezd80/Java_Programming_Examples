@@ -26,7 +26,7 @@ public class RandomNumberExample5 {
    * 
    * @param num
    */
-  public static void randomInts(int num) {
+  private static void randomInts(int num) {
     Random random = new Random();
     random.ints(num).forEach(System.out::println);
   }
@@ -38,7 +38,7 @@ public class RandomNumberExample5 {
    * @param origin
    * @param bound
    */
-  public static void randomInts(int num, int origin, int bound) {
+  private static void randomInts(int num, int origin, int bound) {
     Random random1 = new Random();
     random1.ints(num, origin, bound).forEach(System.out::println);
   }

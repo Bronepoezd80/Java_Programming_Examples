@@ -8,25 +8,25 @@ package _03_Palindrome_Program_in_Java;
  */
 public class PalindromeExample {
 
+  private static int n = 45754; // It is the number variable to be checked for palindrome
+
   /**
    * 
    * @param args
    */
   public static void main(String[] args) {
     General.Description.print(3, "Palindrome Program in Java");
-    int r, sum = 0, temp;
-    int n = 454; // It is the number variable to be checked for palindrome
 
-    temp = n;
+    int sum = 0, temp = n;
     while (n > 0) {
-      r = n % 10; // getting remainder
-      sum = (sum * 10) + r;
-      n = n / 10;
+      sum = (sum * 10) + (n % 10);
+      n /= 10;
     }
-    if (temp == sum)
+    if (temp == sum) {
       System.out.println(temp + " - palindrome number");
-    else
+    } else {
       System.out.println(temp + " - not palindrome number");
+    }
   }
 
 }
