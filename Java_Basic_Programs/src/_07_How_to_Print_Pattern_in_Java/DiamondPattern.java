@@ -1,7 +1,5 @@
 package _07_How_to_Print_Pattern_in_Java;
 
-import java.util.Scanner;
-
 /**
  * 
  * @author Jakob Janzen <jakob.janzen80@gmail.com>
@@ -10,39 +8,72 @@ import java.util.Scanner;
  */
 public class DiamondPattern {
 
+  public static int space = 0;
+
   /**
    * 
    * @param args
    */
   public static void main(String[] args) {
     General.Description.print(7, "Star Pattern: Diamond Shape Pattern");
-    int row, i, j, space = 1;
-    System.out.print("Enter the number of rows you want to print: ");
-    Scanner sc = new Scanner(System.in);
-    row = sc.nextInt();
-    space = row - 1;
-    for (j = 1; j <= row; j++) {
-      for (i = 1; i <= space; i++) {
-        System.out.print(" ");
-      }
-      space--;
-      for (i = 1; i <= 2 * j - 1; i++) {
-        System.out.print("*");
-      }
-      System.out.println("");
-    }
-    space = 1;
-    for (j = 1; j <= row - 1; j++) {
-      for (i = 1; i <= space; i++) {
-        System.out.print(" ");
-      }
-      space++;
-      for (i = 1; i <= 2 * (row - j) - 1; i++) {
-        System.out.print("*");
-      }
-      System.out.println("");
-    }
-    sc.close();
+
+    int rows = General.UserEntry.requestInt("Enter the number of rows you want to print : ");
+    General.UserEntry.closeInput();
+
+    diamond(rows, new DiamondPattern());
   }
 
+  /**
+   * 
+   * @param rows
+   * @param obj
+   */
+  private static void diamond(int rows, DiamondPattern obj) {
+    obj.upperDiamond(rows, obj);
+    obj.lowerDiamond(rows, obj);
+  }
+  
+  public void upperDiamond(int rows, DiamondPattern obj) {
+    space = rows - 1;
+    for (int j = 1; j <= rows; ++j) {
+      obj.spaces(space, obj);
+      --space;
+      obj.stars(2 * j - 1, obj);
+      obj.newRow();
+    }
+  }
+  
+  public void lowerDiamond(int rows, DiamondPattern obj) {
+    space = 1;
+    for (int j = 1; j <= rows - 1; ++j) {
+      obj.spaces(space, obj);
+      ++space;
+      obj.stars(2 * (rows - j) - 1, obj);
+      obj.newRow();
+    }
+  }
+
+  public void spaces(int rows, DiamondPattern obj) {
+    for (int i = 1; i <= rows; ++i) {
+      obj.printSpace();
+    }
+  }
+
+  public void stars(int rows, DiamondPattern obj) {
+    for (int i = 1; i <= rows; ++i) {
+      obj.printStar();
+    }
+  }
+
+  public void printStar() {
+    System.out.print("*");
+  }
+
+  public void printSpace() {
+    System.out.print(" ");
+  }
+
+  public void newRow() {
+    System.out.println();
+  }
 }

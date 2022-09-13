@@ -16,6 +16,7 @@ public class DiamondCharacterPattern {
         'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };
     int alphabet_number = 0;
     String[] diamond = new String[26]; // array of strings
+    
     System.out.print("Enter a Character between A to Z : ");
     Scanner reader = new Scanner(System.in);
     try {

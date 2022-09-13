@@ -1,7 +1,5 @@
 package _07_How_to_Print_Pattern_in_Java;
 
-import java.util.Scanner;
-
 /**
  * 
  * @author Jakob Janzen <jakob.janzen80@gmail.com>
@@ -16,23 +14,64 @@ public class RightPascalTrianglePattern {
    */
   public static void main(String[] args) {
     General.Description.print(7, "Star Pattern: Right Pascal's Triangle");
-    int i, j, rows;
-    Scanner sc = new Scanner(System.in);
-    System.out.print("Enter the number of rows you want to print: ");
-    rows = sc.nextInt();
-    for (i = 0; i <= rows - 1; i++) {
-      for (j = 0; j <= i; j++) {
-        System.out.print("*" + " ");
-      }
-      System.out.println("");
+
+    int rows = General.UserEntry.requestInt("Enter the number of rows you want to print : ");
+    General.UserEntry.closeInput();
+
+    rightPascalTriangle(rows, new RightPascalTrianglePattern());
+  }
+
+  /**
+   * 
+   * @param rows
+   * @param obj
+   */
+  private static void rightPascalTriangle(int rows, RightPascalTrianglePattern obj) {
+    obj.upperTriangle(rows - 1, obj);
+    obj.lowerTriangle(rows - 1, obj);
+  }
+
+  /**
+   * 
+   * @param rows
+   * @param obj
+   */
+  public void upperTriangle(int rows, RightPascalTrianglePattern obj) {
+    for (int i = 0; i <= rows; ++i) {
+      obj.stars(i, obj);
+      obj.newRow();
     }
-    for (i = rows - 1; i >= 0; i--) {
-      for (j = 0; j <= i - 1; j++) {
-        System.out.print("*" + " ");
-      }
-      System.out.println("");
+  }
+
+  /**
+   * 
+   * @param rows
+   * @param obj
+   */
+  public void lowerTriangle(int rows, RightPascalTrianglePattern obj) {
+    for (int i = rows; i >= 0; --i) {
+      obj.stars(i - 1, obj);
+      obj.newRow();
     }
-    sc.close();
+  }
+
+  /**
+   * 
+   * @param rows
+   * @param obj
+   */
+  public void stars(int rows, RightPascalTrianglePattern obj) {
+    for (int j = 0; j <= rows; ++j) {
+      obj.printStar();
+    }
+  }
+
+  public void printStar() {
+    System.out.print("* ");
+  }
+
+  public void newRow() {
+    System.out.println();
   }
 
 }

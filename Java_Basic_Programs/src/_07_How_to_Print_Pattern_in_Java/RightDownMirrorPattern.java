@@ -14,16 +14,59 @@ public class RightDownMirrorPattern {
    */
   public static void main(String[] args) {
     General.Description.print(7, "Star Pattern: Right Down Mirror Star Pattern");
-    int row = 7;
-    for (int i = row; i >= 1; i--) {
-      for (int j = row; j > i; j--) {
-        System.out.print(" ");
-      }
-      for (int k = 1; k <= i; k++) {
-        System.out.print("*");
-      }
-      System.out.println("");
+
+    int rows = General.UserEntry.requestInt("Enter the number of rows you want to print : ");
+    General.UserEntry.closeInput();
+
+    rightDownMirror(rows, new RightDownMirrorPattern());
+  }
+
+  /**
+   * 
+   * @param rows
+   * @param obj
+   */
+  private static void rightDownMirror(int rows, RightDownMirrorPattern obj) {
+    for (int i = rows; i >= 1; --i) {
+      obj.spaces(i, rows, obj);
+      obj.stars(i, obj);
+      obj.newRow();
     }
+  }
+  
+  /**
+   * 
+   * @param i
+   * @param rows
+   * @param obj
+   */
+  public void spaces(int i, int rows, RightDownMirrorPattern obj) {
+    for (int j = rows; j > i; --j) {
+      obj.printSpace();
+    }
+  }
+  
+  /**
+   * 
+   * @param rows
+   * @param obj
+   */
+  public void stars(int rows, RightDownMirrorPattern obj) {
+    for (int k = 1; k <= rows; ++k) {
+      obj.printStar();
+    }
+  }
+
+  public void printStar() {
+    System.out.print("*");
+  }
+
+  public void printSpace() {
+    System.out.print(" ");
+  }
+
+  public void newRow() {
+    System.out.println();
   }
 
 }
