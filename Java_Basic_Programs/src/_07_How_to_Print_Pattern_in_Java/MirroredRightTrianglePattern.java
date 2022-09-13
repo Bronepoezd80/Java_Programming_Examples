@@ -14,18 +14,58 @@ public class MirroredRightTrianglePattern {
    */
   public static void main(String[] args) {
     General.Description.print(7, "Star Pattern: Mirrored Right Triangle Star Pattern");
-    int n = 7;
-    // inner loop
-    for (int i = 0; i <= n; i++) {
-      // outer loop
-      for (int j = 1; j <= n - i; j++) {
-        System.out.print(" ");
-      }
-      for (int k = 0; k <= i; k++) {
-        System.out.print("*");
-      }
-      System.out.println("");
+
+    int rows = General.UserEntry.requestInt("Enter the number of rows you want to print : ");
+    General.UserEntry.closeInput();
+
+    mirroredRightTriangle(rows, new MirroredRightTrianglePattern());
+  }
+
+  /**
+   * 
+   * @param rows
+   * @param obj
+   */
+  private static void mirroredRightTriangle(int rows, MirroredRightTrianglePattern obj) {
+    for (int i = 0; i < rows; i++) {
+      obj.spaces(rows - i, obj);
+      obj.columns(i, obj);
+      obj.newRow();
     }
+  }
+  
+  /**
+   * 
+   * @param rows
+   * @param obj
+   */
+  public void spaces(int rows, MirroredRightTrianglePattern obj) {
+    for (int j = 1; j < rows; j++) {
+      obj.printSpace();
+    }
+  }
+
+  /**
+   * 
+   * @param rows
+   * @param obj
+   */
+  public void columns(int rows, MirroredRightTrianglePattern obj) {
+    for (int k = 0; k <= rows; ++k) {
+      obj.printStar();
+    }
+  }
+
+  public void printStar() {
+    System.out.print("*");
+  }
+
+  public void printSpace() {
+    System.out.print(" ");
+  }
+
+  public void newRow() {
+    System.out.println();
   }
 
 }

@@ -1,6 +1,5 @@
 package _05_Armstrong_Number_in_Java;
 
-import java.util.Scanner;
 import java.lang.Math;
 
 /**
@@ -41,11 +40,9 @@ public class ArmstsrongNumberExample2 {
    */
   public static void main(String[] args) {
     General.Description.print(5, "Armstrong Number Java Program");
-    int num;
-    Scanner sc = new Scanner(System.in);
-    System.out.print("Enter the number: ");
-    num = sc.nextInt();
-    sc.close();
+
+    int num = General.UserEntry.requestInt("Enter the number : ");
+    General.UserEntry.closeInput();
 
     if (isArmstrong(num)) {
       System.out.print("Armstrong ");

@@ -1,7 +1,5 @@
 package _02_Prime_Number_Program_in_Java;
 
-import java.util.Scanner;
-
 /**
  * 
  * @author Jakob Janzen <jakob.janzen80@gmail.com>
@@ -19,12 +17,9 @@ public class PrimeExample4 {
   public static void main(String[] args) {
     General.Description.print(2, "Find prime numbers between two numbers");
 
-    Scanner s = new Scanner(System.in); // must be closed at the end
-    System.out.print("Enter the first number : ");
-    int start = s.nextInt();
-    System.out.print("Enter the second number : ");
-    int end = s.nextInt();
-    s.close(); // closed
+    int start = General.UserEntry.requestInt("Enter the first number : ");
+    int end = General.UserEntry.requestInt("Enter the second number : ");
+    General.UserEntry.closeInput();
 
     System.out.println("List of prime numbers between " + start + " and " + end);
     for (int i = start, col = 0; i <= end; i++) {

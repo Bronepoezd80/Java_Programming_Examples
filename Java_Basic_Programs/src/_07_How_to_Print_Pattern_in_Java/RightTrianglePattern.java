@@ -14,19 +14,42 @@ public class RightTrianglePattern {
    */
   public static void main(String[] args) {
     General.Description.print(7, "Star Pattern: Right Triangle Star Pattern");
-    // i for rows and j for columns
-    // row denotes the number of rows you want to print
-    int i, j, row = 6;
-    // outer loop for rows
-    for (i = 0; i < row; i++) {
-      // inner loop for columns
-      for (j = 0; j <= i; j++) {
-        // prints stars
-        System.out.print("* ");
-      }
-      // throws the cursor in a new line after printing each line
-      System.out.println();
+
+    int rows = General.UserEntry.requestInt("Enter the number of rows you want to print : ");
+    General.UserEntry.closeInput();
+
+    rightTriangle(rows, new RightTrianglePattern());
+  }
+
+  /**
+   * 
+   * @param row
+   * @param obj
+   */
+  private static void rightTriangle(int rows, RightTrianglePattern obj) {
+    for (int i = 0; i < rows; ++i) {
+      obj.columns(i, obj);
+      obj.newRow();
     }
+  }
+
+  /**
+   * 
+   * @param i
+   * @param obj
+   */
+  public void columns(int i, RightTrianglePattern obj) {
+    for (int j = 0; j <= i; ++j) {
+      obj.printStar();
+    }
+  }
+
+  public void printStar() {
+    System.out.print("* ");
+  }
+
+  public void newRow() {
+    System.out.println();
   }
 
 }

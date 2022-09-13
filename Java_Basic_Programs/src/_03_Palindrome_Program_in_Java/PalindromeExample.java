@@ -22,6 +22,7 @@ public class PalindromeExample {
       sum = (sum * 10) + (n % 10);
       n /= 10;
     }
+
     if (temp == sum) {
       System.out.println(temp + " - palindrome number");
     } else {

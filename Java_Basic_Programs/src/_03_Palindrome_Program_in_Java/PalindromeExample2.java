@@ -1,7 +1,5 @@
 package _03_Palindrome_Program_in_Java;
 
-import java.util.*;
-
 /**
  * 
  * @author Jakob Janzen <jakob.janzen80@gmail.com>
@@ -17,20 +15,34 @@ public class PalindromeExample2 {
   public static void main(String[] args) {
     General.Description.print(3, "Palindrome Program in Java (Another way)");
 
-    String reverse = ""; // Objects of String class
-    Scanner in = new Scanner(System.in);
-    System.out.println("Enter a string/number to check if it is a palindrome");
-    String original = in.nextLine();
-    in.close();
+    String original = General.UserEntry.requestStr("Enter a string/number to check if it is a palindrome : ");
+    General.UserEntry.closeInput();
 
-    int length = original.length();
-    for (int i = length - 1; i >= 0; i--) {
+    isPalindrome(new String[] { original, getReverse(original) });
+  }
+
+  /**
+   * 
+   * @param original
+   * @return
+   */
+  private static String getReverse(String original) {
+    String reverse = "";
+    for (int i = original.length() - 1; i >= 0; i--) {
       reverse += original.charAt(i);
     }
-    if (original.equals(reverse)) {
+    return reverse;
+  }
+
+  /**
+   * 
+   * @param strings
+   */
+  private static void isPalindrome(String[] strings) {
+    if (strings[0].equals(strings[1])) {
       System.out.println("Entered string/number is a palindrome.");
     } else {
-      System.out.println("Entered string/number isn not a palindrome.");
+      System.out.println("Entered string/number is not a palindrome.");
     }
   }
 

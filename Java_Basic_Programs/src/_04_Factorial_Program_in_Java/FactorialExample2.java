@@ -15,7 +15,7 @@ public class FactorialExample2 {
    * @param n
    * @return
    */
-  static int factorial(int n) {
+  private static int factorial(int n) {
     if (n == 0) {
       return 1;
     } else {

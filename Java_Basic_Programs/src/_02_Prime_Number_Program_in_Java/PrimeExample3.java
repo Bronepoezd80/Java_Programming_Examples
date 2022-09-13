@@ -1,7 +1,5 @@
 package _02_Prime_Number_Program_in_Java;
 
-import java.util.Scanner;
-
 /**
  * 
  * @author Jakob Janzen <jakob.janzen80@gmail.com>
@@ -17,10 +15,8 @@ public class PrimeExample3 {
   public static void main(String[] args) {
     General.Description.print(2, "Prime Number Program in Java (Another way)");
 
-    Scanner s = new Scanner(System.in); // must be closed at the end
-    System.out.print("Enter a number : ");
-    int n = s.nextInt();
-    s.close(); // closed
+    int n = General.UserEntry.requestInt("Enter a number : ");
+    General.UserEntry.closeInput();
 
     if (isPrime(n)) {
       System.out.println(n + " is a prime number");
