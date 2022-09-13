@@ -8,18 +8,68 @@ package _07_How_to_Print_Pattern_in_Java;
  */
 public class TriangleCharacterPattern {
 
+  private static int alphabet = 65;
+  
+  /**
+   * 
+   * @param args
+   */
   public static void main(String[] args) {
     General.Description.print(7, "Character Pattern: Triangle Character Pattern");
-    for (int i = 0; i <= 8; i++) {
-      int alphabet = 65;
-      for (int j = 8; j > i; j--) {
-        System.out.print(" ");
-      }
-      for (int k = 0; k <= i; k++) {
-        System.out.print((char) (alphabet + k) + " ");
-      }
-      System.out.println();
+
+    int rows = General.UserEntry.requestInt("Enter the number of rows you want to print : ");
+    General.UserEntry.closeInput();
+
+    triangleCharacter(rows, new TriangleCharacterPattern());
+  }
+
+  /**
+   * 
+   * @param rows
+   * @param obj
+   */
+  private static void triangleCharacter(int rows, TriangleCharacterPattern obj) {
+    for (int i = 0; i < rows; ++i) {
+      obj.spaces(i, rows, obj);
+      obj.chars(i, rows, obj);
+      obj.newRow();
     }
+  }
+  
+  /**
+   * 
+   * @param i
+   * @param rows
+   * @param obj
+   */
+  public void spaces(int i, int rows, TriangleCharacterPattern obj) {
+    for (int j = rows; j > i; --j) {
+      obj.printSpace();
+    }
+  }
+  
+  /**
+   * 
+   * @param i
+   * @param rows
+   * @param obj
+   */
+  public void chars(int i, int rows, TriangleCharacterPattern obj) {
+    for (int k = 0; k <= i; ++k) {
+      obj.printChar(k);
+    }
+  }
+
+  public void printChar(int k) {
+    System.out.print((char) (alphabet + k) + " ");
+  }
+
+  public void printSpace() {
+    System.out.print(" ");
+  }
+
+  public void newRow() {
+    System.out.println();
   }
 
 }
