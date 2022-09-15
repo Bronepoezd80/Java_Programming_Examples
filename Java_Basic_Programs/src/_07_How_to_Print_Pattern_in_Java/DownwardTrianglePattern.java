@@ -14,17 +14,43 @@ public class DownwardTrianglePattern {
    */
   public static void main(String[] args) {
     General.Description.print(7, "Star Pattern: Downward Triangle Star Pattern");
-    int rows = 7;
-    // inner loop
+
+    int rows = General.UserEntry.requestInt("Enter the number of rows you want to print : ");
+    General.UserEntry.closeInput();
+
+    downwardTriangle(rows, new DownwardTrianglePattern());
+  }
+
+  /**
+   * 
+   * @param rows
+   * @param obj
+   */
+  private static void downwardTriangle(int rows, DownwardTrianglePattern obj) {
+    obj.newRow();
     for (int i = rows - 1; i >= 0; i--) {
-      // outer loop
-      for (int j = 0; j <= i; j++) {
-        // prints star and space
-        System.out.print("*" + " ");
-      }
-      // throws the cursor in the next line after printing each line
-      System.out.println();
+      obj.stars(i, obj);
+      obj.newRow();
     }
+  }
+
+  /**
+   * 
+   * @param i
+   * @param obj
+   */
+  public void stars(int i, DownwardTrianglePattern obj) {
+    for (int j = 0; j <= i; ++j) {
+      obj.printStar();
+    }
+  }
+
+  public void printStar() {
+    System.out.print("* ");
+  }
+
+  public void newRow() {
+    System.out.println();
   }
 
 }

@@ -1,7 +1,5 @@
 package _07_How_to_Print_Pattern_in_Java;
 
-import java.util.Scanner;
-
 /**
  * 
  * @author Jakob Janzen <jakob.janzen80@gmail.com>
@@ -16,29 +14,83 @@ public class LeftPascalTrianglePattern {
    */
   public static void main(String[] args) {
     General.Description.print(7, "Star Pattern: Left Pascal's Triangle");
-    int i, j, k, rows;
-    Scanner sc = new Scanner(System.in);
-    System.out.print("Enter the number of rows you want to print: ");
-    rows = sc.nextInt();
-    for (i = 1; i <= rows; i++) {
-      for (j = i; j < rows; j++) {
-        System.out.print(" ");
-      }
-      for (k = 1; k <= i; k++) {
-        System.out.print("*");
-      }
-      System.out.println("");
+
+    int rows = General.UserEntry.requestInt("Enter the number of rows you want to print : ");
+    General.UserEntry.closeInput();
+
+    leftPascalTriangle(rows, new LeftPascalTrianglePattern());
+  }
+
+  /**
+   * 
+   * @param rows
+   * @param obj
+   */
+  private static void leftPascalTriangle(int rows, LeftPascalTrianglePattern obj) {
+    obj.newRow();
+    obj.upperTriangle(rows, obj);
+    obj.lowerTriangle(rows, obj);
+  }
+
+  /**
+   * 
+   * @param rows
+   * @param obj
+   */
+  public void upperTriangle(int rows, LeftPascalTrianglePattern obj) {
+    for (int i = 1; i <= rows; ++i) {
+      obj.spaces(i, rows, obj);
+      obj.stars(i + 1, obj);
+      obj.newRow();
     }
-    for (i = rows; i >= 1; i--) {
-      for (j = i; j <= rows; j++) {
-        System.out.print(" ");
-      }
-      for (k = 1; k < i; k++) {
-        System.out.print("*");
-      }
-      System.out.println("");
+  }
+
+  /**
+   * 
+   * @param rows
+   * @param obj
+   */
+  public void lowerTriangle(int rows, LeftPascalTrianglePattern obj) {
+    for (int i = rows; i >= 1; --i) {
+      obj.spaces(i, rows + 1, obj);
+      obj.stars(i, obj);
+      obj.newRow();
     }
-    sc.close();
+  }
+
+  /**
+   * 
+   * @param i
+   * @param rows
+   * @param obj
+   */
+  public void spaces(int i, int rows, LeftPascalTrianglePattern obj) {
+    for (int j = i; j < rows; j++) {
+      obj.printSpace();
+    }
+  }
+
+  /**
+   * 
+   * @param rows
+   * @param obj
+   */
+  public void stars(int rows, LeftPascalTrianglePattern obj) {
+    for (int k = 1; k < rows; ++k) {
+      obj.printStar();
+    }
+  }
+
+  public void printStar() {
+    System.out.print("*");
+  }
+
+  public void printSpace() {
+    System.out.print(" ");
+  }
+
+  public void newRow() {
+    System.out.println();
   }
 
 }

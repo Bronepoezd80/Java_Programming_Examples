@@ -14,21 +14,58 @@ public class Pattern1 {
    */
   public static void main(String[] args) {
     General.Description.print(7, "Number Pattern: Pattern-1");
-    // i for rows and j for columns
-    int i, j, number, n = 7;
-    // loop for rows
-    for (i = 0; i < n; i++) {
-      number = 1;
-      // loop for columns
-      for (j = 0; j <= i; j++) {
-        // prints num
-        System.out.print(number + " ");
-        // incrementing the value of number
-        number++;
-      }
-      // throws the cursor at the next line after printing each row
-      System.out.println();
+
+    int n = General.UserEntry.requestInt("Enter the number of rows you want to print : ");
+    General.UserEntry.closeInput();
+
+    pattern(n, new Pattern1());
+  }
+
+  /**
+   * 
+   * @param n
+   * @param obj
+   */
+  private static void pattern(int n, Pattern1 obj) {
+    obj.newRow();
+    obj.rows(n, obj);
+  }
+  
+  /**
+   * 
+   * @param n
+   * @param obj
+   */
+  public void rows(int n, Pattern1 obj) {
+    for (int i = 0; i < n; ++i) {
+      int number = 1;
+      obj.numbers(i, number, obj);
+      obj.newRow();
     }
+  }
+
+  /**
+   * 
+   * @param i
+   * @param number
+   * @param obj
+   */
+  public void numbers(int i, int number, Pattern1 obj) {
+    for (int j = 0; j <= i; ++j) {
+      obj.printNumber(number++);
+    }
+  }
+
+  public void printNumber(int n) {
+    System.out.print(n + " ");
+  }
+
+  public void printSpace() {
+    System.out.print(" ");
+  }
+
+  public void newRow() {
+    System.out.println();
   }
 
 }

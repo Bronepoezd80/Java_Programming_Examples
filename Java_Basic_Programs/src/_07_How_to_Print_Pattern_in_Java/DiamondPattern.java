@@ -33,6 +33,11 @@ public class DiamondPattern {
     obj.lowerDiamond(rows, obj);
   }
   
+  /**
+   * 
+   * @param rows
+   * @param obj
+   */
   public void upperDiamond(int rows, DiamondPattern obj) {
     space = rows - 1;
     for (int j = 1; j <= rows; ++j) {
@@ -43,6 +48,11 @@ public class DiamondPattern {
     }
   }
   
+  /**
+   * 
+   * @param rows
+   * @param obj
+   */
   public void lowerDiamond(int rows, DiamondPattern obj) {
     space = 1;
     for (int j = 1; j <= rows - 1; ++j) {
@@ -53,12 +63,22 @@ public class DiamondPattern {
     }
   }
 
+  /**
+   * 
+   * @param rows
+   * @param obj
+   */
   public void spaces(int rows, DiamondPattern obj) {
     for (int i = 1; i <= rows; ++i) {
       obj.printSpace();
     }
   }
 
+  /**
+   * 
+   * @param rows
+   * @param obj
+   */
   public void stars(int rows, DiamondPattern obj) {
     for (int i = 1; i <= rows; ++i) {
       obj.printStar();
