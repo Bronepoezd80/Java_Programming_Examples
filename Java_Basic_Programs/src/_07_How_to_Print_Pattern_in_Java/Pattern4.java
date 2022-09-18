@@ -14,32 +14,115 @@ public class Pattern4 {
    */
   public static void main(String[] args) {
     General.Description.print(7, "Number Pattern: Pattern-4");
-    for (int i = 1; i <= 4; i++) {
-      int n = 8;
-      for (int j = 1; j <= n - i; j++) {
-        System.out.print(" ");
-      }
-      for (int k = i; k >= 1; k--) {
-        System.out.print(k);
-      }
-      for (int l = 2; l <= i; l++) {
-        System.out.print(l);
-      }
-      System.out.println();
+
+    int n = General.UserEntry.requestInt("Enter the number of rows you want to print : ");
+    General.UserEntry.closeInput();
+
+    pattern(n, new int[] { 1, 2, 3, 4 }, new Pattern4());
+  }
+
+  /**
+   * 
+   * @param n
+   * @param x
+   * @param obj
+   */
+  private static void pattern(int n, int[] x, Pattern4 obj) {
+    obj.upperPart(n, x, obj);
+    obj.lowerPart(n, x, obj);
+  }
+
+  /**
+   * 
+   * @param n
+   * @param x
+   * @param obj
+   */
+  public void upperPart(int n, int[] x, Pattern4 obj) {
+    for (int i = x[0]; i <= x[3]; ++i) {
+      int nx = n;
+      obj.spaces(x[0], nx - i, obj);
+      obj.numbers(i, x, obj);
+      obj.newRow();
     }
-    for (int i = 3; i >= 1; i--) {
-      int n = 10;
-      for (int j = 0; j <= n - i; j++) {
-        System.out.print(" ");
-      }
-      for (int k = i; k >= 1; k--) {
-        System.out.print(k);
-      }
-      for (int l = 2; l <= i; l++) {
-        System.out.print(l);
-      }
-      System.out.println();
+  }
+
+  /**
+   * 
+   * @param n
+   * @param x
+   * @param obj
+   */
+  public void lowerPart(int n, int[] x, Pattern4 obj) {
+    for (int i = x[2]; i >= x[0]; --i) {
+      int ny = n - x[0];
+      obj.spaces(0, ny - i, obj);
+      obj.numbers(i, x, obj);
+      obj.newRow();
     }
+  }
+
+  /**
+   * 
+   * @param x
+   * @param nz
+   * @param obj
+   */
+  public void spaces(int x, int nz, Pattern4 obj) {
+    for (int j = x; j <= nz; ++j) {
+      obj.printSpace();
+    }
+  }
+
+  /**
+   * 
+   * @param i
+   * @param x
+   * @param obj
+   */
+  public void numbers(int i, int[] x, Pattern4 obj) {
+    obj.numbers1(i, x, obj);
+    obj.numbers2(i, x, obj);
+  }
+  
+  /**
+   * 
+   * @param i
+   * @param x
+   * @param obj
+   */
+  public void numbers1(int i, int[] x, Pattern4 obj) {
+    for (int k = i; k >= x[0]; --k) {
+      obj.printNumber(k);
+    }
+  }
+
+  /**
+   * 
+   * @param i
+   * @param x
+   * @param obj
+   */
+  public void numbers2(int i, int[] x, Pattern4 obj) {
+    for (int l = x[1]; l <= i; ++l) {
+      obj.printNumber(l);
+    }
+  }
+
+  /**
+   * 
+   * @param n
+   */
+  public void printNumber(int n) {
+    System.out.print(n);
+  }
+
+  public void printSpace() {
+    System.out.print(" ");
+  }
+
+  public void newRow() {
+    System.out.println();
   }
 
 }

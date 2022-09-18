@@ -1,7 +1,5 @@
 package _07_How_to_Print_Pattern_in_Java;
 
-import java.util.Scanner;
-
 /**
  * 
  * @author Jakob Janzen <jakob.janzen80@gmail.com>
@@ -16,16 +14,46 @@ public class Pattern7 {
    */
   public static void main(String[] args) {
     General.Description.print(7, "Number Pattern: Pattern-7");
-    int i, j, n;
-    Scanner sc = new Scanner(System.in);
-    System.out.print("Enter the number of rows you want to print: ");
-    n = sc.nextInt();
-    for (i = 1; i <= n; i++) {
-      for (j = i; j >= 1; j--) {
-        System.out.print(j + " ");
-      }
-      System.out.println();
+
+    int rows = General.UserEntry.requestInt("Enter the number of rows you want to print : ");
+    General.UserEntry.closeInput();
+
+    pattern(rows, new Pattern7());
+  }
+
+  /**
+   * 
+   * @param rows
+   * @param obj
+   */
+  private static void pattern(int rows, Pattern7 obj) {
+    for (int i = 1; i <= rows; ++i) {
+      obj.numbers(i, obj);
+      obj.newRow();
     }
+  }
+
+  /**
+   * 
+   * @param i
+   * @param obj
+   */
+  public void numbers(int i, Pattern7 obj) {
+    for (int j = i; j >= 1; --j) {
+      obj.printNumber(j);
+    }
+  }
+
+  /**
+   * 
+   * @param n
+   */
+  public void printNumber(int n) {
+    System.out.print(n + " ");
+  }
+
+  public void newRow() {
+    System.out.println();
   }
 
 }

@@ -60,10 +60,6 @@ public class Pattern1 {
     System.out.print(n + " ");
   }
 
-  public void printSpace() {
-    System.out.print(" ");
-  }
-
   public void newRow() {
     System.out.println();
   }

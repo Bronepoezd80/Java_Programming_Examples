@@ -14,16 +14,46 @@ public class Pattern3 {
    */
   public static void main(String[] args) {
     General.Description.print(7, "Number Pattern: Pattern-3");
-    int n = 8; // n is the number of rows you want to print
+
+    int n = General.UserEntry.requestInt("Enter the number of rows you want to print : ");
+    General.UserEntry.closeInput();
+
+    pattern(n, new Pattern3());
+  }
+
+  /**
+   * 
+   * @param n
+   * @param obj
+   */
+  private static void pattern(int n, Pattern3 obj) {
     for (int i = 0; i < n; i++) {
       int number = 1;
-      System.out.printf("%" + (n - i) * 2 + "s", "");
-      for (int j = 0; j <= i; j++) {
-        System.out.printf("%4d", number);
-        number = number * (i - j) / (j + 1);
-      }
-      System.out.println();
+      obj.printNumber(String.format("%" + (n - i) * 2 + "s", ""));
+      obj.numbers(i, number, obj);
+      obj.newRow();
     }
+  }
+
+  /**
+   * 
+   * @param i
+   * @param number
+   * @param obj
+   */
+  public void numbers(int i, int number, Pattern3 obj) {
+    for (int j = 0; j <= i; j++) {
+      obj.printNumber(String.format("%4d", number));
+      number = number * (i - j) / (j + 1);
+    }
+  }
+
+  public void printNumber(String n) {
+    System.out.print(n);
+  }
+
+  public void newRow() {
+    System.out.println();
   }
 
 }
