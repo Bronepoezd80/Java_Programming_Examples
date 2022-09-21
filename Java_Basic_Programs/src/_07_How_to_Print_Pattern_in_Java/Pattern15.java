@@ -14,18 +14,59 @@ public class Pattern15 {
    */
   public static void main(String[] args) {
     General.Description.print(7, "Number Pattern: Pattern-15");
-    int i, j, rows = 9;
-    for (i = 1; i <= rows; i++) {
-      // Prints first half of the row
-      for (j = 1; j <= i; j++) {
-        System.out.print(j + " ");
-      }
-      // Prints second half of the row
-      for (j = i - 1; j >= 1; j--) {
-        System.out.print(j + " ");
-      }
-      System.out.println();
+
+    int rows = General.UserEntry.requestInt("Enter the number of rows you want to print : ");
+    General.UserEntry.closeInput();
+
+    pattern(rows, new Pattern15());
+  }
+
+  /**
+   * 
+   * @param rows
+   * @param obj
+   */
+  private static void pattern(int rows, Pattern15 obj) {
+    obj.newRow();
+    for (int i = 1; i <= rows; i++) {
+      obj.firstHalf(i, obj);
+      obj.secondHalf(i, obj);
+      obj.newRow();
     }
+  }
+
+  /**
+   * 
+   * @param i
+   * @param obj
+   */
+  public void firstHalf(int i, Pattern15 obj) {
+    for (int j = 1; j <= i; ++j) {
+      obj.printNumber(j);
+    }
+  }
+
+  /**
+   * 
+   * @param i
+   * @param obj
+   */
+  public void secondHalf(int i, Pattern15 obj) {
+    for (int j = i - 1; j >= 1; --j) {
+      obj.printNumber(j);
+    }
+  }
+
+  /**
+   * 
+   * @param n
+   */
+  public void printNumber(int n) {
+    System.out.print(n + " ");
+  }
+
+  public void newRow() {
+    System.out.println();
   }
 
 }

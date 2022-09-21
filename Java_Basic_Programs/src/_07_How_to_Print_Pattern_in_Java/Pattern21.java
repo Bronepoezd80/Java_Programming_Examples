@@ -1,7 +1,5 @@
 package _07_How_to_Print_Pattern_in_Java;
 
-import java.util.Scanner;
-
 /**
  * 
  * @author Jakob Janzen <jakob.janzen80@gmail.com>
@@ -16,36 +14,59 @@ public class Pattern21 {
    */
   public static void main(String[] args) {
     General.Description.print(7, "Number Pattern: Pattern-21");
-    int i, j, min, n; // n is the number up to you want to print
-    System.out.print("Enter the value of n: ");
-    Scanner sc = new Scanner(System.in);
-    n = sc.nextInt();
-    // loo for upper left part
-    for (i = 1; i <= n; i++) {
-      for (j = 1; j <= n; j++) {
+
+    int n = General.UserEntry.requestInt("Enter the value of n : ");
+    General.UserEntry.closeInput();
+
+    pattern(n, new Pattern21());
+  }
+
+  /**
+   * 
+   * @param n
+   * @param obj
+   */
+  private static void pattern(int n, Pattern21 obj) {
+    obj.newRow();
+    int min; // n is the number up to you want to print
+    // loop for upper left part
+    for (int i = 1; i <= n; ++i) {
+      for (int j = 1; j <= n; ++j) {
         min = i < j ? i : j;
-        System.out.print(n - min + 1 + " ");
+        obj.printNumber(n - min + 1);
       }
       // loop for upper right part
-      for (j = n - 1; j >= 1; j--) {
+      for (int j = n - 1; j >= 1; --j) {
         min = i < j ? i : j;
-        System.out.print(n - min + 1 + " ");
+        obj.printNumber(n - min + 1);
       }
-      System.out.println();
+      obj.newRow();
     }
     // loop for lower left part
-    for (i = n - 1; i >= 1; i--) {
-      for (j = 1; j <= n; j++) {
+    for (int i = n - 1; i >= 1; --i) {
+      for (int j = 1; j <= n; ++j) {
         min = i < j ? i : j;
-        System.out.print(n - min + 1 + " ");
+        obj.printNumber(n - min + 1);
       }
       // loop for lower right part
-      for (j = n - 1; j >= 1; j--) {
+      for (int j = n - 1; j >= 1; --j) {
         min = i < j ? i : j;
-        System.out.print(n - min + 1 + " ");
+        obj.printNumber(n - min + 1);
       }
-      System.out.println();
+      obj.newRow();
     }
+  }
+
+  /**
+   * 
+   * @param n
+   */
+  public void printNumber(int n) {
+    System.out.print(n + " ");
+  }
+
+  public void newRow() {
+    System.out.println();
   }
 
 }

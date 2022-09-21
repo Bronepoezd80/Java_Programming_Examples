@@ -27,6 +27,7 @@ public class Pattern8 {
    * @param obj
    */
   private static void pattern(int rows, Pattern8 obj) {
+    obj.newRow();
     for (int i = 1; i <= rows; i++) {
       int num = 0;
       obj.numbers(i, num, rows, obj);
